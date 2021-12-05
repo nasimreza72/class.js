@@ -7,7 +7,22 @@
     <title>java script assignment</title>
 </head>
 <body>
+    const activities = {
+        Monday : "Swimming",
+        Tuesday : "Book Club",
+        Wednesday : "Gymnastic",
+        Thursday : "Babysitting",
+        Friday : "Debating Society",
+        WeeksPlan : function () {
+            return `${ this.Monday[0].toUpperCase()+ 
+                
+                this.Monday.substring(1, this.Monday.length-1).split(``).reverse().join("")
+                
+                +this.Monday[this.Monday.length-1].toUpperCase()} > ${this.Tuesday} > ${this.Wednesday} `
+        }
+    }
     
+    console.log(activities.WeeksPlan());
 
 
     <script src="/script.js"></script>
