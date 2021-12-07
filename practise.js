@@ -27,7 +27,7 @@ function scrambleWord(arr) {
     for ( let ii=0; ii<arr.length; ii++){
         let singleWord = arr[ii];
 
-        if(arr[ii] = Number){
+        if(typeof singleWord === "string"){
 
             word = singleWord[0].toUpperCase() +
             singleWord.substring(1, singleWord.length-1).split("").reverse().join("") +
@@ -35,15 +35,13 @@ function scrambleWord(arr) {
      
             sentence += " "+word;
         } else{
-            console.log(`note a string`);
+            console.log(`it's a number`);
         }
-
     }
-//     console.log(typeof sentence);
-    return sentence
- }
+    return sentence.trimStart()
+    }
 
-console.log(scrambleWord(["autumn", "summer", "winter", "007"]));
+console.log(scrambleWord(["autumn", "summer",777, "winter"]));
 
 
 //console.log(scrambleWord(["swimming and running iss good exercise"]));
