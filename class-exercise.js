@@ -29,13 +29,10 @@ class Student extends Person{
             super(fName, lName, bYear, location, country);
             this.university = university;
             this.studentId = studentId;
-
+        }
         }
 
-        pension () {
-            return this.age()*1000;
-        }
-}
+        
 
 class UniversityStudent extends Student {
     constructor(fName, lName, bYear, location, country, university, studentId, universityLocation){
